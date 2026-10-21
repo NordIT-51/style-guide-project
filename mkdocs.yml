@@ -21,6 +21,7 @@ nav:
       - Структура документов: guide/structure.md
       - Формат и Markdown: guide/formatting.md
       - REST API: guide/api.md
+      - Доступность текста: guide/accessibility.md
       - Качество: guide/quality.md
   - Примеры:
       - Быстрый старт: examples/quickstart.md
