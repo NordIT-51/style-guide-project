@@ -1,0 +1,28 @@
+site_name: Стайлгайд документации Booking API
+site_url: https://example.github.io/style-guide-project/
+theme:
+  name: material
+  language: ru
+  features:
+    - navigation.sections
+    - search.suggest
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+strict: true
+nav:
+  - Главная: index.md
+  - Руководство по стилю:
+      - Обзор: guide/index.md
+      - Область применения: guide/scope.md
+      - Язык и термины: guide/language.md
+      - Структура документов: guide/structure.md
+      - Формат и Markdown: guide/formatting.md
+      - REST API: guide/api.md
+      - Качество: guide/quality.md
+  - Примеры:
+      - Быстрый старт: examples/quickstart.md
+      - Справочник операции: examples/get-availability.md
+  - Источники: sources.md
