@@ -11,7 +11,8 @@
 ## Коммиты
 
 Формат: `<type>(<scope>): <описание>`.
-Типы: `docs`, `fix`, `ci`, `test`, `chore`.
+Типы: `docs`, `fix`, `ci`, `test`, `chore`, `feat`, `refactor`, `perf`, `build`, `style`.
+`scope` — необязательная часть, указывает на затронутый раздел (например, `accessibility`).
 
 Пример: `docs(accessibility): add text accessibility rules`.
 

@@ -1,5 +1,5 @@
 site_name: Стайлгайд документации Booking API
-site_url: https://example.github.io/style-guide-project/
+site_url: https://nordit-51.github.io/style-guide-project/
 theme:
   name: material
   language: ru
@@ -27,3 +27,5 @@ nav:
       - Быстрый старт: examples/quickstart.md
       - Справочник операции: examples/get-availability.md
   - Источники: sources.md
+extra:
+  version: 1.0.0

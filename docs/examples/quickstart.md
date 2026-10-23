@@ -14,10 +14,12 @@
 1. Проверьте доступность комнаты.
 
 ```http
-GET /rooms/101/availability?date=2026-10-20 HTTP/1.1
+GET /rooms/101/availability?date=2026-11-20 HTTP/1.1
 Host: api.example.test
 Authorization: Bearer test-token
 ```
+
+Ожидаемый результат: сервер вернул список свободных слотов.
 
 2. Создайте бронирование.
 
@@ -31,18 +33,31 @@ Content-Type: application/json
 ```json
 {
   "room_id": 101,
-  "start": "2026-10-20T10:00:00Z",
-  "end": "2026-10-20T11:00:00Z",
+  "start": "2026-11-20T10:00:00Z",
+  "end": "2026-11-20T11:00:00Z",
   "title": "Синк команды"
 }
 ```
 
-## Результат
+**Результат:** сервер вернул `201 Created` и объект бронирования с полем `id`.
 
-Сервер вернул `201 Created` и объект бронирования с полем `id`.
+```json
+{
+  "id": 5541,
+  "room_id": 101,
+  "status": "confirmed"
+}
+```
 
 ## Ошибки
 
-- `400` — неверный формат даты;
-- `401` — отсутствует или просрочен токен;
-- `409` — комната уже занята в это время.
+Формат ошибок соответствует RFC 9457 (Content-Type: application/problem+json).
+
+```json
+{
+  "type": "https://api.example.test/errors/invalid-token",
+  "title": "Unauthorized",
+  "status": 401,
+  "detail": "Token is missing or expired"
+}
+```

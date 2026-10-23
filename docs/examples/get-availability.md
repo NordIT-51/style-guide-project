@@ -32,22 +32,24 @@ Bearer-токен.
 ```json
 {
   "room_id": 101,
-  "date": "2026-10-20",
+  "date": "2026-11-20",
   "slots": [
-    { "start": "10:00", "end": "11:00" },
-    { "start": "14:00", "end": "15:30" }
+    { "start": "10:00Z", "end": "11:00Z" },
+    { "start": "14:00Z", "end": "15:30Z" }
   ]
 }
 ```
 
 ## Ошибки
 
+Формат ошибок соответствует RFC 9457 (Content-Type: application/problem+json).
+
 ```json
 {
   "type": "https://api.example.test/errors/room-not-found",
   "title": "Room not found",
   "status": 404,
-  "detail": "Room with id 101 does not exist",
-  "instance": "/rooms/101/availability"
+  "detail": "Room with id 102 does not exist",
+  "instance": "/rooms/102/availability"
 }
 ```
